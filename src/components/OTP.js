@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import OTPInput, { ResendOTP } from "otp-input-react";
 
 function OTP() {
-  const [close, setClose] = React.useState(false);
+  const [close, setClose] = React.useState(true);
   const [OTPCode, setOTPCODE] = useState("");
 
   return (
