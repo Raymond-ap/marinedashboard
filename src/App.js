@@ -11,33 +11,21 @@ import ResetPassword from "pages/auth/ResetPassword";
 
 // Tailwind CSS Style Sheet
 import "assets/styles/tailwind.css";
+import "assets/styles/index.css";
+import React from "react";
 
-// const AuthRoute = () => {
-//   return (
-//     <>
-//       <Route exact path="/" component={Login} />
-//       <Route path="/signup" component={Signup} />
-//       <Route path="/reset-password" component={ResetPassword} />
-//     </>
-//   );
-// };
-
-// const DashboardRoute = () => {
-//   return (
-//     <>
-//       <Sidebar />
-//       <div className="relative md:ml-64 bg-blueGray-100">
-//         <Route path="/" component={Dashboard} />
-//         <Route path="/settings" component={Settings} />
-//         <Route path="/tables" component={Tables} />
-//         <Route path="/maps" component={Maps} />
-//         <Footer />
-//       </div>
-//     </>
-//   );
-// };
 
 function App() {
+  React.useEffect(() => {
+    // get iframes and hide them
+    const iframes = document.getElementsByTagName("iframe");
+    for (let i = 0; i < iframes.length; i++) {
+      iframes[i].style.display = "none !important";
+      iframes[i].style.position = "relative";
+      iframes[i].style.zIndex = "-1";
+    }
+  }, []);
+
   return (
     <>
       {/* <Switch>
@@ -47,7 +35,7 @@ function App() {
       </Switch> */}
       <Sidebar />
       <div className="relative md:ml-64 bg-blueGray-100">
-        <Route path="/" component={Dashboard} />
+        <Route exact path="/" component={Dashboard} />
         <Route path="/settings" component={Settings} />
         <Route path="/tables" component={Tables} />
         <Route path="/maps" component={Maps} />

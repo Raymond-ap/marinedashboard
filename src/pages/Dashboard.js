@@ -2,10 +2,12 @@ import StatusCard from "components/StatusCard";
 import { GiCash } from "react-icons/gi";
 import { FaRegHandshake } from "react-icons/fa";
 import { AiOutlineLock, AiOutlineClockCircle } from "react-icons/ai";
+import OTP from "components/OTP";
 
 export default function Dashboard() {
   return (
     <>
+    <OTP />
       <div className="px-3 md:px-8 h-32" />
 
       <div className="px-3 md:px-8 -mt-24">
