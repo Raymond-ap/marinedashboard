@@ -1,12 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import OTP from "components/OTP";
 
 function Login() {
   return (
+    <>
     <div className="grid h-screen items-center justify-center mx-auto">
       <div className="w-full">
         <div className="w-96 p-6 m-auto bg-white rounded-md shadow-md">
-          <h1 className="text-3xl font-semibold text-center text-purple-700">
+          <h1 className="text-3xl font-semibold text-center text-[#234092]">
             Login
           </h1>
           <form className="mt-6">
@@ -36,13 +38,13 @@ function Login() {
             </div>
             <NavLink
               to={"/reset-password"}
-              className="text-xs text-purple-600 hover:underline"
+              className="text-xs text-[#e41d21] hover:underline"
             >
               Forget Password?
             </NavLink>
             <div className="mt-6 w-full">
               <NavLink to="/dashboard">
-                <button className="w-full bg-blue-200 py-2 rounded-md font-bold">
+                <button className="w-full bg-[#234092] py-2 rounded-md font-bold">
                   Log in
                 </button>
               </NavLink>
@@ -54,7 +56,7 @@ function Login() {
             Don't have an account?{" "}
             <NavLink
               to={"/signup"}
-              className="font-medium text-purple-600 hover:underline"
+              className="font-medium text-[#234092] hover:underline"
             >
               Sign up
             </NavLink>
@@ -62,6 +64,7 @@ function Login() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 

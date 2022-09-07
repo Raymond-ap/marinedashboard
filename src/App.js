@@ -8,38 +8,31 @@ import Footer from "components/Footer";
 import Login from "pages/auth/Login";
 import Signup from "pages/auth/Signup";
 import ResetPassword from "pages/auth/ResetPassword";
+import Overview from "components/MultiStep/Overview";
+import Parent from "components/MultiStep/Parent";
 
 // Tailwind CSS Style Sheet
 import "assets/styles/tailwind.css";
-import "assets/styles/index.css";
+// import "assets/styles/index.css";
 import React from "react";
 
-
 function App() {
-  React.useEffect(() => {
-    // get iframes and hide them
-    const iframes = document.getElementsByTagName("iframe");
-    for (let i = 0; i < iframes.length; i++) {
-      iframes[i].style.display = "none !important";
-      iframes[i].style.position = "relative";
-      iframes[i].style.zIndex = "-1";
-    }
-  }, []);
-
   return (
     <>
-      {/* <Switch>
-        <Route exact path="/" component={Login} />
+      <Switch>
+        <Route exact path="/" component={Overview} />
+        <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
         <Route path="/reset-password" component={ResetPassword} />
-      </Switch> */}
-      <Sidebar />
+        <Route path="/customer" component={Parent} />
+      </Switch>
+      {/* <Sidebar />
       <div className="relative md:ml-64 bg-blueGray-100">
         <Route exact path="/" component={Dashboard} />
         <Route path="/settings" component={Settings} />
         <Route path="/tables" component={Tables} />
         <Route path="/maps" component={Maps} />
-      </div>
+      </div> */}
     </>
   );
 }

@@ -6,7 +6,7 @@ function Signup() {
     <div className="grid h-screen items-center justify-center mx-auto">
       <div className="">
         <div className="w-96 p-6 m-auto bg-white rounded-md shadow-md">
-          <h1 className="text-3xl font-semibold text-center text-purple-700">
+          <h1 className="text-3xl font-semibold text-center text-[#234092]">
             Sign up
           </h1>
           <form className="mt-6">
@@ -37,7 +37,7 @@ function Signup() {
 
             <div className="mt-6">
               <NavLink to="/dashboard">
-                <button className="w-full bg-blue-200 py-2 rounded-md font-bold">
+                <button className="w-full bg-[#234092] py-2 rounded-md font-bold">
                   Sign up
                 </button>
               </NavLink>
@@ -49,7 +49,7 @@ function Signup() {
             Already have an account?{" "}
             <NavLink
               to={"/"}
-              className="font-medium text-purple-600 hover:underline"
+              className="font-medium text-[#234092] hover:underline"
             >
               Log in
             </NavLink>
